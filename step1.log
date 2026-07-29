@@ -1,0 +1,236 @@
+Last login: Wed Jul 29 14:36:14 on console
+yerihan3763@c5r6s7 ~ % docker --version
+zsh: command not found: docker
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % sw_vers
+ProductName:		macOS
+ProductVersion:		15.7.7
+BuildVersion:		24G720
+yerihan3763@c5r6s7 ~ % echo $SHELL
+/bin/zsh
+yerihan3763@c5r6s7 ~ % git --version
+git version 2.53.0
+yerihan3763@c5r6s7 ~ % cd ~ 
+yerihan3763@c5r6s7 ~ % pwd
+/Users/yerihan3763
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % git clone https://github.com/yerihanview/Codyssey_M1
+Cloning into 'Codyssey_M1'...
+warning: You appear to have cloned an empty repository.
+yerihan3763@c5r6s7 ~ % ls
+Codyssey_M1	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+yerihan3763@c5r6s7 ~ % ls -la
+total 8
+drwxr-x---+ 15 yerihan3763  yerihan3763   480 Jul 29 14:50 .
+drwxr-xr-x   9 root         admin         288 Jul 29 12:56 ..
+-r--------   1 yerihan3763  yerihan3763     7 Jul 29 12:56 .CFUserTextEncoding
+drwx------+  2 yerihan3763  yerihan3763    64 Jul 29 12:57 .Trash
+drwxr-xr-x   3 yerihan3763  yerihan3763    96 Jul 29 12:57 .vscode
+drwx------   3 yerihan3763  yerihan3763    96 Jul 29 14:40 .zsh_sessions
+drwxr-xr-x   3 yerihan3763  yerihan3763    96 Jul 29 14:50 Codyssey_M1
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Desktop
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Documents
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Downloads
+drwx------@ 76 yerihan3763  yerihan3763  2432 Jul 29 13:18 Library
+drwx------   3 yerihan3763  yerihan3763    96 Jul 29 12:56 Movies
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Music
+drwx------+  4 yerihan3763  yerihan3763   128 Jul 29 12:56 Pictures
+drwxr-xr-x+  4 yerihan3763  yerihan3763   128 Jul 29 12:56 Public
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % 
+yerihan3763@c5r6s7 ~ % ls -al
+total 8
+drwxr-x---+ 15 yerihan3763  yerihan3763   480 Jul 29 14:50 .
+drwxr-xr-x   9 root         admin         288 Jul 29 12:56 ..
+-r--------   1 yerihan3763  yerihan3763     7 Jul 29 12:56 .CFUserTextEncoding
+drwx------+  2 yerihan3763  yerihan3763    64 Jul 29 12:57 .Trash
+drwxr-xr-x   3 yerihan3763  yerihan3763    96 Jul 29 12:57 .vscode
+drwx------   3 yerihan3763  yerihan3763    96 Jul 29 14:40 .zsh_sessions
+drwxr-xr-x   3 yerihan3763  yerihan3763    96 Jul 29 14:50 Codyssey_M1
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Desktop
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Documents
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Downloads
+drwx------@ 76 yerihan3763  yerihan3763  2432 Jul 29 13:18 Library
+drwx------   3 yerihan3763  yerihan3763    96 Jul 29 12:56 Movies
+drwx------+  3 yerihan3763  yerihan3763    96 Jul 29 12:56 Music
+drwx------+  4 yerihan3763  yerihan3763   128 Jul 29 12:56 Pictures
+drwxr-xr-x+  4 yerihan3763  yerihan3763   128 Jul 29 12:56 Public
+yerihan3763@c5r6s7 ~ % cd Codyssey_M1 
+yerihan3763@c5r6s7 Codyssey_M1 % ls -la
+total 0
+drwxr-xr-x   3 yerihan3763  yerihan3763   96 Jul 29 14:50 .
+drwxr-x---+ 15 yerihan3763  yerihan3763  480 Jul 29 14:50 ..
+drwxr-xr-x   9 yerihan3763  yerihan3763  288 Jul 29 14:50 .git
+yerihan3763@c5r6s7 Codyssey_M1 % pwd
+/Users/yerihan3763/Codyssey_M1
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % code .
+yerihan3763@c5r6s7 Codyssey_M1 % ls -la
+total 8
+drwxr-xr-x   4 yerihan3763  yerihan3763   128 Jul 29 14:53 .
+drwxr-x---+ 15 yerihan3763  yerihan3763   480 Jul 29 14:50 ..
+drwxr-xr-x   9 yerihan3763  yerihan3763   288 Jul 29 14:50 .git
+-rw-r--r--   1 yerihan3763  yerihan3763  1013 Jul 29 14:56 README.md
+yerihan3763@c5r6s7 Codyssey_M1 % git add README.md
+yerihan3763@c5r6s7 Codyssey_M1 % git commit -m "docs: README 뼈대 작성"
+[main (root-commit) b68a2c0] docs: README 뼈대 작성
+ Committer: 우광택 <yerihan3763@c5r6s7.codyssey.kr>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 43 insertions(+)
+ create mode 100644 README.md
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
+Username for 'https://github.com': yerihanview
+Password for 'https://yerihanview@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/yerihanview/Codyssey_M1/'
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview: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@://github.com 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
+fatal: unable to access 'https://://github.com/': URL rejected: No host part in the URL
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://github.com@                                
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main                         
+fatal: unable to access 'https:///': URL rejected: No host part in the URL
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72jZyPSCzNj1uAoGk4xu9OVcUl7UPXXXXXX@yerihanview/Codyssey_M1.git
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
+fatal: unable to access 'https://yerihanview/Codyssey_M1.git/': Could not resolve host: yerihanview
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72jZyPSCzNj1uAoGk4xu9OVcUl7UPXXXXXX@://github.com
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72jZyPSCzNj1uAoGk4xu9OVcUl7UPXXXXXX@://github.com/yerihanview/Codyssey_M1.git
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
+fatal: unable to access 'https://://github.com/yerihanview/Codyssey_M1.git/': URL rejected: No host part in the URL
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72jZyPSCzNj1uAoGk4xu9OVcUl7UPXXXXXX@github.com/yerihanview/Codyssey_M1.git 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 832 bytes | 832.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yerihanview/Codyssey_M1.git
+ * [new branch]      main -> main
+yerihan3763@c5r6s7 Codyssey_M1 % docker --version
+zsh: command not found: docker
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % docker --version
+zsh: command not found: docker
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % orb status
+zsh: command not found: orb
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % echo 'export PATH="$HOME/.orbstack/bin:$PATH"' >> ~/.zshrc
+
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % orb status
+zsh: command not found: orb
+yerihan3763@c5r6s7 Codyssey_M1 % source ~/.zshrc
+
+yerihan3763@c5r6s7 Codyssey_M1 % orb --version
+Error: unknown flag --version
+Usage:
+  orb run [flags] [COMMAND] [ARGS]...
+
+Aliases:
+  run, exec, shell
+
+Examples:
+  orb run ls
+
+Flags:
+  -h, --help             help for run
+  -m, --machine string   Use a specific machine
+  -p, --path             Translate absolute macOS paths to Linux paths
+  -s, --shell            Use the login shell instead of running command directly
+  -u, --user string      Run as a specific user
+  -w, --workdir string   Set the working directory
+
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % orb status
+Running
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % docker --version
+Docker version 28.5.2, build ecc6942
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % sw_vers
+ProductName:		macOS
+ProductVersion:		15.7.7
+BuildVersion:		24G720
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % echo $SHELL
+/bin/zsh
+yerihan3763@c5r6s7 Codyssey_M1 % git --version
+git version 2.53.0
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % git add README.md 
+yerihan3763@c5r6s7 Codyssey_M1 % git commit -m "docs: 실행 환경 정보 추가"    
+[main 257312b] docs: 실행 환경 정보 추가
+ Committer: 우광택 <yerihan3763@c5r6s7.codyssey.kr>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 397 bytes | 397.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yerihanview/Codyssey_M1.git
+   b68a2c0..257312b  main -> main
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+  [Restored Jul 29, 2026 at 5:52:10 PM]
+Last login: Wed Jul 29 17:52:04 on console
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 
+yerihan3763@c5r6s7 Codyssey_M1 % 한글이야.
+zsh: command not found: 한글이야.
