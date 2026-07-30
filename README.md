@@ -32,6 +32,31 @@
 ## 4. 수행 로그
 (각 단계 진행하면서 여기에 추가 예정)
 
+### 1단계: 터미널 기초
+
+#### 기본 명령어
+| 명령어 | 설명 | 실행 결과 요약 |
+|--------|------|--------------|
+| `pwd` | 현재 경로 출력 | `/Users/yerihan3763/Codyssey_M1` |
+| `ls -al` | 상세 목록 출력 | README.md, .git 확인 |
+| `mkdir practice` | 폴더 생성 | practice/ 폴더 생성 확인 |
+| `touch hello.txt` | 빈 파일 생성 | 0 bytes 파일 생성 확인 |
+| `cp` | 파일 복사 | hello_copy.txt 생성 확인 |
+| `mv` | 이름 변경 | renamed.txt로 변경 확인 |
+| `rm` | 파일 삭제 | 삭제 후 ls로 확인 |
+
+#### 경로 실습
+- 절대경로: `/Users/yerihan3763/Codyssey_M1`
+- 상대경로: `cd ..` → `cd practice` → `cd ../..` 순서로 이동 확인
+
+#### 권한 실습
+| 명령어 | 변경 전 | 변경 후 |
+|--------|---------|---------|
+| `chmod 755 hello_copy.txt` | `-rw-r--r--` (644) | `-rwxr-xr-x` (755) |
+| `chmod 644 hello_copy.txt` | `-rwxr-xr-x` (755) | `-rw-r--r--` (644) |
+| `chmod 600 world.txt` | `-rw-r--r--` (644) | `-rw-------` (600) |
+
+
 ---
 
 ## 5. 트러블슈팅
