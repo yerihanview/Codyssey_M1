@@ -56,6 +56,35 @@
 | `chmod 644 hello_copy.txt` | `-rwxr-xr-x` (755) | `-rw-r--r--` (644) |
 | `chmod 600 world.txt` | `-rw-r--r--` (644) | `-rw-------` (600) |
 
+### 2단계: Docker 기초
+
+#### 설치 확인
+| 명령어 | 출력 요약 |
+|--------|---------|
+| `docker --version` | Docker version 28.5.2 |
+| `docker info` | Server 섹션 정상 출력 확인 |
+
+#### hello-world 실행
+- `docker run hello-world` 실행
+- Docker Hub에서 이미지 pull → 컨테이너 실행 → 메시지 출력 → 자동 종료 흐름 확인
+- `docker ps -a` 로 Exited(0) 상태 확인
+
+#### ubuntu 컨테이너 진입
+- `docker run -it ubuntu /bin/bash` 로 컨테이너 진입
+- 컨테이너 안에서 `cat /etc/os-release` 로 Ubuntu 환경 확인
+- `exit` 후 컨테이너 Exited 상태 확인
+
+#### attach vs exec 차이
+| 항목 | attach | exec |
+|------|--------|------|
+| exit 후 컨테이너 | 종료됨 | 유지됨 |
+| 탈출 단축키 | Ctrl+P,Q | exit |
+| 용도 | 메인 프로세스 연결 | 새 프로세스 추가 |
+
+#### 운영 명령어
+- `docker ps / ps -a` : 실행 중 / 전체 컨테이너 확인
+- `docker logs` : 컨테이너 로그 확인
+- `docker stop → rm → rmi` : 정지 → 삭제 순서 확인
 
 ---
 
