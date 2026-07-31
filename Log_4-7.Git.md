@@ -101,9 +101,9 @@ remote: Invalid username or token. Password authentication is not supported for 
 fatal: Authentication failed for 'https://github.com/yerihanview/Codyssey_M1/'
 ```
 
-### github 연결하기 (github에서 token 발급후, 인증없이 자동 로그인)
+### github 연결하기 (github에서 token 발급후, 인증없이 자동 로그인) + 토큰 마스킹
 ```css
-yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72jZyPSCzNj1uAoGk4xu9OVcUl7UPXXXXXX@github.com/yerihanview/Codyssey_M1.git 
+yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72XXXXXXXXXXXXXXXXXXXXXXXXXXXX@github.com/yerihanview/Codyssey_M1.git 
 yerihan3763@c5r6s7 Codyssey_M1 % 
 yerihan3763@c5r6s7 Codyssey_M1 % 
 ```
