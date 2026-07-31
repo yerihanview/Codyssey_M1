@@ -1,9 +1,9 @@
 
-## Git 버전 확인 : git --version 
+### Git 버전 확인 : git --version 
 ```css
 yerihan3763@c5r6s7 ~ % git --version
 ```
-## Git 초기화 : git init 
+### Git 초기화 : git init 
 ```css
 yerihan3763@c5r4s7 ~ % git init
 hint: Using 'master' as the name for the initial branch. This default branch name
@@ -22,7 +22,7 @@ hint: Disable this message with "git config set advice.defaultBranchName false"
 /Users/yerihan3763/.git/ 안의 빈 깃 저장소를 다시 초기화했습니다
 ```
 
-## Git 사용자 정보 설정 : git config
+### Git 사용자 정보 설정 : git config
 ```css
 yerihan3763@c5r4s7 ~ % git config --global user.name "우광택"
 yerihan3763@c5r4s7 ~ % git config --global user.email "yerihna@gmail.com"
@@ -31,7 +31,7 @@ user.name=우광택
 user.email=yerihna@gmail.com
 ```
 
-## Git 복제하기 (from github) : git clone
+### Git 복제하기 (from github) : git clone
 ```css
 yerihan3763@c5r4s7 ~ % git clone https://github.com/yerihanview/Codyssey_M1
 'Codyssey_M1'에 복제합니다...
@@ -76,13 +76,13 @@ drwxr-xr-x   4 yerihan3763  yerihan3763    128  7 31 14:49 docker-practice
 -rw-r--r--   1 yerihan3763  yerihan3763  27696  7 31 14:49 step3.log
 ```
 
-## 현재 폴더에서 VSCode 열기 + VSCode에서 README.md 수정하기
+### 현재 폴더에서 VSCode 열기 + VSCode에서 README.md 수정하기
 ```css
 yerihan3763@c5r6s7 Codyssey_M1 % 
 yerihan3763@c5r6s7 Codyssey_M1 % code .
 ```
 
-## 로컬PC에 임시 저장하기 : git add , git commit
+### 로컬PC에 임시 저장하기 : git add , git commit
 ```css
 yerihan3763@c5r4s7 Codyssey_M1 % touch test.txt
 yerihan3763@c5r4s7 Codyssey_M1 % git add test.txt
@@ -92,7 +92,7 @@ yerihan3763@c5r4s7 Codyssey_M1 % git commit -m "docs: test.txt 생성"
  create mode 100644 test.txt
 ```
 
-## github에 저장하기(실패: 권한이 없음)
+### github에 저장하기(실패: 권한이 없음)
 ```css
 yerihan3763@c5r6s7 Codyssey_M1 % git push origin main  
 Username for 'https://github.com': yerihanview
@@ -101,14 +101,14 @@ remote: Invalid username or token. Password authentication is not supported for 
 fatal: Authentication failed for 'https://github.com/yerihanview/Codyssey_M1/'
 ```
 
-## github 연결하기 (github에서 token 발급후, 인증없이 자동 로그인)
+### github 연결하기 (github에서 token 발급후, 인증없이 자동 로그인)
 ```css
 yerihan3763@c5r6s7 Codyssey_M1 % git remote set-url origin https://yerihanview:ghp_q72jZyPSCzNj1uAoGk4xu9OVcUl7UPXXXXXX@github.com/yerihanview/Codyssey_M1.git 
 yerihan3763@c5r6s7 Codyssey_M1 % 
 yerihan3763@c5r6s7 Codyssey_M1 % 
 ```
 
-## github에 저장하기 (origin: 원격 저장소, main: main branch)
+### github에 저장하기 (origin: 원격 저장소, main: main branch)
 ```css
 yerihan3763@c5r6s7 Codyssey_M1 % git push origin main
 Enumerating objects: 3, done.
