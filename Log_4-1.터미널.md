@@ -1,45 +1,35 @@
-Last login: Thu Jul 30 09:07:31 on ttys000
-yerihan3763@c4r2s8 ~ % cd Codyssey_M1 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
+### 개발 환경 정보 확인
+```css
+yerihan3763@c5r6s7 Codyssey_M1 % sw_vers
+ProductName:		macOS
+ProductVersion:		15.7.7
+BuildVersion:		24G720
+
+yerihan3763@c5r6s7 Codyssey_M1 % echo $SHELL
+/bin/zsh
+```
+
+### echo, cat, cp, ls -al, mv
+```css
 yerihan3763@c4r2s8 Codyssey_M1 % echo "Hello, Codyssey!" > practice/hello.txt 
 dquote> 
 yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % echo "Hello" > practice/hello.txt 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % cat practice/hello.txt 
-Hello
-yerihan3763@c4r2s8 Codyssey_M1 % cat "Hello, Co" > practice/hello.txt
-cat: Hello, Co: No such file or directory
-yerihan3763@c4r2s8 Codyssey_M1 % echo "Hello, Co" > practice/hello.txt 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % echo "Hello, Codyssey!" > practice/hello.txt
-dquote> 
-yerihan3763@c4r2s8 Codyssey_M1 % echo "Hello, Codyssey" > practice/hello.txt
-yerihan3763@c4r2s8 Codyssey_M1 % echo "Hello, Codyssey!" > practice/hello.txt
-dquote> quit
-dquote> 
+
 yerihan3763@c4r2s8 Codyssey_M1 % echo 'Hello, Codyssey!' > practice/hello.txt 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
+
 yerihan3763@c4r2s8 Codyssey_M1 % cat practice/hello.txt 
 Hello, Codyssey!
+
 yerihan3763@c4r2s8 Codyssey_M1 % cp practice/hello.txt practice/hello_copy.txt
 yerihan3763@c4r2s8 Codyssey_M1 % ls -al practice 
-total 16
+titotal 16
 drwxr-xr-x  6 yerihan3763  yerihan3763  192  7 30 09:29 .
 drwxr-xr-x  6 yerihan3763  yerihan3763  192  7 30 09:14 ..
 -rw-r--r--  1 yerihan3763  yerihan3763   17  7 30 09:29 hello_copy.txt
 -rw-r--r--  1 yerihan3763  yerihan3763   17  7 30 09:28 hello.txt
 drwxr-xr-x  2 yerihan3763  yerihan3763   64  7 30 09:14 sub
 -rw-r--r--  1 yerihan3763  yerihan3763    0  7 30 09:15 world.txt
-yerihan3763@c4r2s8 Codyssey_M1 % mv practice/copy.txt practice/renamed.txt
-mv: rename practice/copy.txt to practice/renamed.txt: No such file or directory
-yerihan3763@c4r2s8 Codyssey_M1 %  
-yerihan3763@c4r2s8 Codyssey_M1 % 
+
 yerihan3763@c4r2s8 Codyssey_M1 % mv practice/hello.txt practice/renamed.txt
 yerihan3763@c4r2s8 Codyssey_M1 % 
 yerihan3763@c4r2s8 Codyssey_M1 % ls -al
@@ -58,6 +48,10 @@ drwxr-xr-x  6 yerihan3763  yerihan3763  192  7 30 09:14 ..
 -rw-r--r--  1 yerihan3763  yerihan3763   17  7 30 09:28 renamed.txt
 drwxr-xr-x  2 yerihan3763  yerihan3763   64  7 30 09:14 sub
 -rw-r--r--  1 yerihan3763  yerihan3763    0  7 30 09:15 world.txt
+```
+
+### rm
+```css
 yerihan3763@c4r2s8 Codyssey_M1 % rm practice/renamed.txt 
 yerihan3763@c4r2s8 Codyssey_M1 % ls -la
 total 24
@@ -76,19 +70,12 @@ drwxr-xr-x  4 yerihan3763  yerihan3763  128  7 30 09:31 .
 drwxr-xr-x  6 yerihan3763  yerihan3763  192  7 30 09:14 ..
 -rw-r--r--  1 yerihan3763  yerihan3763   17  7 30 09:29 hello_copy.txt
 -rw-r--r--  1 yerihan3763  yerihan3763    0  7 30 09:15 world.txt
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % pwd
-/Users/yerihan3763/Codyssey_M1
-yerihan3763@c4r2s8 Codyssey_M1 % 
+```
+
+### 디렉토리 이동
+```css
 yerihan3763@c4r2s8 Codyssey_M1 % cd ~                              
 yerihan3763@c4r2s8 ~ % pwd
-/Users/yerihan3763
-yerihan3763@c4r2s8 ~ % cd ~
-yerihan3763@c4r2s8 ~ % cd home
-cd: no such file or directory: home
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % 
 yerihan3763@c4r2s8 ~ % cd Codyssey_M1 
 yerihan3763@c4r2s8 Codyssey_M1 % cd ..
 yerihan3763@c4r2s8 ~ % cd ..
@@ -105,99 +92,19 @@ drwxr-x---+ 21 pdg10135527     pdg10135527     672  7 29 17:12 pdg10135527
 drwxr-x---+ 13 potago1238614   potago1238614   416  7 28 16:42 potago1238614
 drwxrwxrwt   4 root            wheel           128  4 29 15:43 Shared
 drwxr-x---+ 15 yerihan3763     yerihan3763     480  7 30 09:11 yerihan3763
-yerihan3763@c4r2s8 /Users % cd potago1238614 
-cd: permission denied: potago1238614
-yerihan3763@c4r2s8 /Users % 
-yerihan3763@c4r2s8 /Users % cd yerihan3763 
-yerihan3763@c4r2s8 ~ % pwd
-/Users/yerihan3763
-yerihan3763@c4r2s8 ~ % cd Codyssey_M1/practice 
-yerihan3763@c4r2s8 practice % cd ../..
-yerihan3763@c4r2s8 ~ % pwd
-/Users/yerihan3763
-yerihan3763@c4r2s8 ~ % cd .
-yerihan3763@c4r2s8 ~ % cd Codyssey_M1/practice 
-yerihan3763@c4r2s8 practice % ls -la
-total 8
-drwxr-xr-x  4 yerihan3763  yerihan3763  128  7 30 09:31 .
-drwxr-xr-x  6 yerihan3763  yerihan3763  192  7 30 09:14 ..
--rw-r--r--  1 yerihan3763  yerihan3763   17  7 30 09:29 hello_copy.txt
--rw-r--r--  1 yerihan3763  yerihan3763    0  7 30 09:15 world.txt
+```
+
+### 권한 설정
+```css
 yerihan3763@c4r2s8 practice % chmod 755 hello_copy.txt 
-yerihan3763@c4r2s8 practice % ls -la
-total 8
-drwxr-xr-x  4 yerihan3763  yerihan3763  128  7 30 09:31 .
-drwxr-xr-x  6 yerihan3763  yerihan3763  192  7 30 09:14 ..
--rwxr-xr-x  1 yerihan3763  yerihan3763   17  7 30 09:29 hello_copy.txt
--rw-r--r--  1 yerihan3763  yerihan3763    0  7 30 09:15 world.txt
 yerihan3763@c4r2s8 practice % ls -al hello_copy.txt 
 -rwxr-xr-x  1 yerihan3763  yerihan3763  17  7 30 09:29 hello_copy.txt
-yerihan3763@c4r2s8 practice % 
+
 yerihan3763@c4r2s8 practice % chmod 644 hello_copy.txt 
 yerihan3763@c4r2s8 practice % ls -al hello_copy.txt 
 -rw-r--r--  1 yerihan3763  yerihan3763  17  7 30 09:29 hello_copy.txt
+
 yerihan3763@c4r2s8 practice % chmod 600 world.txt 
 yerihan3763@c4r2s8 practice % ls -al world.txt 
 -rw-------  1 yerihan3763  yerihan3763  0  7 30 09:15 world.txt
-yerihan3763@c4r2s8 practice % 
-yerihan3763@c4r2s8 practice % 
-yerihan3763@c4r2s8 practice % 
-yerihan3763@c4r2s8 practice % 
-yerihan3763@c4r2s8 practice % cd ..
-yerihan3763@c4r2s8 Codyssey_M1 % ls -al
-total 24
-drwxr-xr-x   6 yerihan3763  yerihan3763   192  7 30 09:14 .
-drwxr-x---+ 15 yerihan3763  yerihan3763   480  7 30 09:11 ..
-drwxr-xr-x  12 yerihan3763  yerihan3763   384  7 30 09:11 .git
-drwxr-xr-x   4 yerihan3763  yerihan3763   128  7 30 09:31 practice
--rw-r--r--   1 yerihan3763  yerihan3763   956  7 30 09:11 README.md
--rw-r--r--   1 yerihan3763  yerihan3763  6614  7 30 09:11 step1.log
-yerihan3763@c4r2s8 Codyssey_M1 % code .
-yerihan3763@c4r2s8 Codyssey_M1 % git --version
-git version 2.53.0
-yerihan3763@c4r2s8 Codyssey_M1 % git add .
-yerihan3763@c4r2s8 Codyssey_M1 % git commit -m "docs: 1단계 터미널 기초 실습 로 그 추가"
-[main 050399b] docs: 1단계 터미널 기초 실습 로그 추가
- Committer: 우광택 <yerihan3763@c4r2s8.codyssey.kr>
-이름과 전자메일 주소를 사용자 이름과 호스트 이름을 이용해서 자동으로
-설정했습니다. 이 정보가 맞는지 확인하십시오. 이 메시지를 보지 않으려면 정보를
-명시적으로 설정하십시오. 다음 명령어를 실행하고 편집기의 안내에 따라 설정
-파일을 편집하십시오:
 
-    git config --global --edit
-
-이렇게 한 다음, 이 커밋에 사용한 신원 정보를 다음과 같이 해서 바꿀 수 있습니다:
-
-    git commit --amend --reset-author
-
- 3 files changed, 26 insertions(+)
- create mode 100644 practice/hello_copy.txt
- create mode 100644 practice/world.txt
-yerihan3763@c4r2s8 Codyssey_M1 % git push origin main
-  [복원됨 2026. 7. 30. 오전 9:43:26]
-Last login: Thu Jul 30 09:23:34 on ttys000
-Restored session: #오후
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % git remote set-url https://yerihanview:XXXXX@github.com/yerihanview/Codyssey_M1
-사용법: git remote set-url [--push] <이름> <새url> [<옛url>]
-  또는: git remote set-url --add <이름> <새url>
-  또는: git remote set-url --delete <이름> <url>
-
-    --[no-]push           푸시 URL을 지정합니다
-    --[no-]add            URL을 추가합니다
-    --[no-]delete         URL을 삭제합니다
-
-yerihan3763@c4r2s8 Codyssey_M1 % git remote set-url origin https://yerihanview:XXXXX@github.com/yerihanview/Codyssey_M1
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % git push origin main
-오브젝트 나열하는 중: 8, 완료.
-오브젝트 개수 세는 중: 100% (8/8), 완료.
-Delta compression using up to 6 threads
-오브젝트 압축하는 중: 100% (4/4), 완료.
-오브젝트 쓰는 중: 100% (6/6), 1.50 KiB | 1.50 MiB/s, 완료.
-Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To https://github.com/yerihanview/Codyssey_M1
-   126efe9..050399b  main -> main
