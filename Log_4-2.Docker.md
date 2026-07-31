@@ -1,20 +1,42 @@
 
+### 개발 환경 정보 확인 + README.md에 기록
+```css
+yerihan3763@c5r6s7 Codyssey_M1 % sw_vers
+ProductName:		macOS
+ProductVersion:		15.7.7
+BuildVersion:		24G720
 
+yerihan3763@c5r6s7 Codyssey_M1 % echo $SHELL
+/bin/zsh
 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % orb status
-Stopped
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % orb status
+yerihan3763@c5r6s7 Codyssey_M1 % git --version
+git version 2.53.0
+```
+
+### docker 기동 확인 : 실패 (OrbStack이 죽어 있음)
+```css
+yerihan3763@c5r6s7 Codyssey_M1 % docker --version  
+zsh: command not found: docker
+yerihan3763@c5r6s7 Codyssey_M1 % orb status
+zsh: command not found: orb
+```
+
+### OrbStack 기동 + Path 연결
+```css
+yerihan3763@c5r6s7 Codyssey_M1 % echo 'export PATH="$HOME/.orbstack/bin:$PATH"' >> ~/.zshrc
+yerihan3763@c5r6s7 Codyssey_M1 % source ~/.zshrc  // 반드시 실행
+yerihan3763@c5r6s7 Codyssey_M1 % orb status
 Running
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % docker --version
+```
+
+### 도커 버전 확인
+```css
+yerihan3763@c5r6s7 Codyssey_M1 % docker --version
 Docker version 28.5.2, build ecc6942
-yerihan3763@c4r2s8 Codyssey_M1 % 
+```
+
+### 도커 정보 확인
+```css
 yerihan3763@c4r2s8 Codyssey_M1 % docker info
 Client:
  Version:    28.5.2
@@ -112,8 +134,10 @@ Server:
    Base: fd07:b51a:cc66:d000::/56, Size: 64
 
 WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
-yerihan3763@c4r2s8 Codyssey_M1 % 
-yerihan3763@c4r2s8 Codyssey_M1 % 
+```
+
+### 도커 실행 : run =  image pull + container create + container start 
+```css
 yerihan3763@c4r2s8 Codyssey_M1 % docker run hello-world
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -141,25 +165,19 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
+```
 
+### 도커 컨테이너 리스트 조회 
+```css
 yerihan3763@c4r2s8 Codyssey_M1 % docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 yerihan3763@c4r2s8 Codyssey_M1 % docker ps -a
 CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                     PORTS     NAMES
 f263c2f71254   hello-world   "/hello"   5 minutes ago   Exited (0) 5 minutes ago             sad_chaplygin
-yerihan3763@c4r2s8 Containers % cd ~
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                     PORTS     NAMES
-f263c2f71254   hello-world   "/hello"   8 minutes ago   Exited (0) 8 minutes ago             sad_chaplygin
+```
 
-
-yerihan3763@c4r2s8 Codyssey_M1 %
-yerihan3763@c4r2s8 Codyssey_M1 %
-
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                     PORTS     NAMES
-f263c2f71254   hello-world   "/hello"   9 minutes ago   Exited (0) 9 minutes ago             sad_chaplygin
+### 특정 도커 컨테이너 상세 정보
+```css
 yerihan3763@c4r2s8 ~ % docker inspect f263c2f71254
 [
     {
@@ -363,25 +381,10 @@ yerihan3763@c4r2s8 ~ % docker inspect f263c2f71254
         }
     }
 ]
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % cd /var/lib/docker/overlay2/
-cd: no such file or directory: /var/lib/docker/overlay2/
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % cd /var/
-yerihan3763@c4r2s8 /var % cd lib
-yerihan3763@c4r2s8 lib % ls   
-postfix
-yerihan3763@c4r2s8 lib % ls -la
-total 0
-drwxr-xr-x   3 root      wheel    96  2  1 15:03 .
-drwxr-xr-x  33 root      wheel  1056  7 30 07:22 ..
-drwx------   3 _postfix  wheel    96  5 12 11:10 postfix
-yerihan3763@c4r2s8 lib % cd postfix 
-cd: permission denied: postfix
-yerihan3763@c4r2s8 lib % 
-yerihan3763@c4r2s8 lib % 
-yerihan3763@c4r2s8 lib % dockr run -it ubuntu /bin/bash
-zsh: command not found: dockr
+```
+
+### 도커 컨테이너 터미널 연결해서 띄우기 + 도커 컨테이너 안으로 들어가기
+```css
 yerihan3763@c4r2s8 lib % docker run -it ubuntu /bin/bash
 Unable to find image 'ubuntu:latest' locally
 latest: Pulling from library/ubuntu
@@ -389,6 +392,8 @@ ed819469700f: Pull complete
 a3679419df18: Pull complete 
 Digest: sha256:3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb
 Status: Downloaded newer image for ubuntu:latest
+
+// 도커 내부
 root@52007bcabe5f:/# 
 root@52007bcabe5f:/# whoami
 root
@@ -411,13 +416,18 @@ root@52007bcabe5f:/# cat /tmp/test.txt
 I've entered a container.
 root@52007bcabe5f:/# exit
 exit
-yerihan3763@c4r2s8 lib % 
-yerihan3763@c4r2s8 lib % 
-yerihan3763@c4r2s8 lib % 
+```
+
+### 도커 컨테이너 리스트 조회
+```css
 yerihan3763@c4r2s8 lib % docker ps -a
 CONTAINER ID   IMAGE         COMMAND       CREATED              STATUS                      PORTS     NAMES
 52007bcabe5f   ubuntu        "/bin/bash"   About a minute ago   Exited (0) 11 seconds ago             nifty_curie
 f263c2f71254   hello-world   "/hello"      15 minutes ago       Exited (0) 15 minutes ago             sad_chaplygin
+```
+
+### 도커 컨테이너 백그라운드로 띄우기
+```css
 yerihan3763@c4r2s8 lib % docker run -it -d --name myubuntu ubuntu /bin/bash
 c21fef3363b42476aef2f291b859769e400619ed23679128bc0b27983c25248a
 yerihan3763@c4r2s8 lib % 
@@ -426,15 +436,13 @@ CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS              
 c21fef3363b4   ubuntu        "/bin/bash"   7 seconds ago    Up 6 seconds                              myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   3 minutes ago    Exited (0) About a minute ago             nifty_curie
 f263c2f71254   hello-world   "/hello"      17 minutes ago   Exited (0) 17 minutes ago                 sad_chaplygin
+```
+
+### 도커 컨테이너에 연결하기 + exit로 빠져나가기
+```css
 yerihan3763@c4r2s8 lib % docker attach myubuntu
-root@c21fef3363b4:/# 
-root@c21fef3363b4:/# 
-root@c21fef3363b4:/# "attach  echo."
-bash: attach  echo.: command not found
-root@c21fef3363b4:/# 'attach  echo.'
-bash: attach  echo.: command not found
-root@c21fef3363b4:/# 
-root@c21fef3363b4:/# #
+
+// 도커 컨테이너 내부
 root@c21fef3363b4:/#    ls -al
 total 16
 drwxr-xr-x   1 root root   6 Jul 30 01:11 .
@@ -474,39 +482,32 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 UBUNTU_CODENAME=resolute
 LOGO=ubuntu-logo
-root@c21fef3363b4:/# exit
+root@c21fef3363b4:/# exit   // exit로 나오면, Exited 상태에 빠짐
 exit
+
 yerihan3763@c4r2s8 lib % docker ps -a
 CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                      PORTS     NAMES
 c21fef3363b4   ubuntu        "/bin/bash"   2 minutes ago    Exited (0) 4 seconds ago              myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   5 minutes ago    Exited (0) 3 minutes ago              nifty_curie
 f263c2f71254   hello-world   "/hello"      19 minutes ago   Exited (0) 19 minutes ago             sad_chaplygin
+```
+
+### Exit된 컨테이너 다시 띄우기 + 터미널 연결하기 + Ctrl+P,Q로 빠져나가기
+```css
 yerihan3763@c4r2s8 lib % docker start myubuntu
 myubuntu
+
 yerihan3763@c4r2s8 lib % docker ps -a
 CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                      PORTS     NAMES
 c21fef3363b4   ubuntu        "/bin/bash"   3 minutes ago    Up 5 seconds                          myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   6 minutes ago    Exited (0) 4 minutes ago              nifty_curie
 f263c2f71254   hello-world   "/hello"      20 minutes ago   Exited (0) 20 minutes ago             sad_chaplygin
 yerihan3763@c4r2s8 lib % docker attach myubuntu 
-root@c21fef3363b4:/# read escape sequence
-yerihan3763@c4r2s8 lib % 
-yerihan3763@c4r2s8 lib % cd ~
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                      PORTS     NAMES
-c21fef3363b4   ubuntu        "/bin/bash"   4 minutes ago    Up 40 seconds                         myubuntu
-52007bcabe5f   ubuntu        "/bin/bash"   7 minutes ago    Exited (0) 5 minutes ago              nifty_curie
-f263c2f71254   hello-world   "/hello"      20 minutes ago   Exited (0) 20 minutes ago             sad_chaplygin
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % docker attach myubuntu
-root@c21fef3363b4:/# read escape sequence
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                      PORTS     NAMES
-c21fef3363b4   ubuntu        "/bin/bash"   4 minutes ago    Up About a minute                     myubuntu
-52007bcabe5f   ubuntu        "/bin/bash"   7 minutes ago    Exited (0) 5 minutes ago              nifty_curie
-f263c2f71254   hello-world   "/hello"      21 minutes ago   Exited (0) 21 minutes ago             sad_chaplygin
+root@c21fef3363b4:/# read escape sequence.  // Ctrl+P,Q
+```
+
+### 새로운 터미널 연결지점 만들기 + exit로 빠져나가기
+```css
 yerihan3763@c4r2s8 ~ % docker exec -it myubuntu /bin/bash
 root@c21fef3363b4:/# ps -ef
 UID          PID    PPID  C STIME TTY          TIME CMD
@@ -515,7 +516,7 @@ root           8       0  0 01:16 pts/1    00:00:00 /bin/bash
 root          15       8  0 01:16 pts/1    00:00:00 ps -ef
 root@c21fef3363b4:/# exit
 exit
-yerihan3763@c4r2s8 ~ % docker ps -a
+yerihan3763@c4r2s8 ~ % docker ps -a  // exit를 해도 계속 UP 상태
 CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                      PORTS     NAMES
 c21fef3363b4   ubuntu        "/bin/bash"   5 minutes ago    Up 2 minutes                          myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   8 minutes ago    Exited (0) 7 minutes ago              nifty_curie
@@ -531,7 +532,10 @@ CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS              
 c21fef3363b4   ubuntu        "/bin/bash"   6 minutes ago    Up 2 minutes                          myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   9 minutes ago    Exited (0) 7 minutes ago              nifty_curie
 f263c2f71254   hello-world   "/hello"      23 minutes ago   Exited (0) 23 minutes ago             sad_chaplygin
-yerihan3763@c4r2s8 ~ % 
+```
+
+### docker logs
+```css
 yerihan3763@c4r2s8 ~ % docker logs myubuntu
 root@c21fef3363b4:/# 
 root@c21fef3363b4:/# 
@@ -790,40 +794,44 @@ yerihan3763@c4r2s8 ~ % docker inspect myubuntu
         }
     }
 ]
+```
+
+### PC에 저장된 도커 이미지 조회
+```css
 yerihan3763@c4r2s8 ~ % docker images
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 ubuntu        latest    de7345b16e94   2 weeks ago    100MB
 hello-world   latest    e2ac70e7319a   4 months ago   10.1kB
+```
+
+### 도커 이미지 지우기 (실패) : 컨테이너가 남아 있음
+```css
 yerihan3763@c4r2s8 ~ % docker rmi hello-world
 Error response from daemon: conflict: unable to remove repository reference "hello-world" (must force) - container f263c2f71254 is using its referenced image e2ac70e7319a
-yerihan3763@c4r2s8 ~ % docker ps -ef
-unknown shorthand flag: 'e' in -ef
 
-Usage:  docker ps [OPTIONS]
-
-Run 'docker ps --help' for more information
-yerihan3763@c4r2s8 ~ % dockr ps -a
-zsh: command not found: dockr
 yerihan3763@c4r2s8 ~ % docker ps -a
 CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                      PORTS     NAMES
 c21fef3363b4   ubuntu        "/bin/bash"   9 minutes ago    Up 5 minutes                          myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   12 minutes ago   Exited (0) 10 minutes ago             nifty_curie
 f263c2f71254   hello-world   "/hello"      26 minutes ago   Exited (0) 26 minutes ago             sad_chaplygin
-yerihan3763@c4r2s8 ~ % docker stop myubuntu
+```
 
-myubuntu
-yerihan3763@c4r2s8 ~ % 
+### 컨테이너 중단시키기 + 컨테이너 삭제하기 + 도커 이미지 삭제하기
+```css
+yerihan3763@c4r2s8 ~ % docker stop myubuntu
 yerihan3763@c4r2s8 ~ % docker ps -a
 CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS                       PORTS     NAMES
 c21fef3363b4   ubuntu        "/bin/bash"   9 minutes ago    Exited (137) 6 seconds ago             myubuntu
 52007bcabe5f   ubuntu        "/bin/bash"   12 minutes ago   Exited (0) 11 minutes ago              nifty_curie
 f263c2f71254   hello-world   "/hello"      26 minutes ago   Exited (0) 26 minutes ago              sad_chaplygin
+
 yerihan3763@c4r2s8 ~ % docker rm sad_chaplygin            
 sad_chaplygin
 yerihan3763@c4r2s8 ~ % docker ps -a
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES
 c21fef3363b4   ubuntu    "/bin/bash"   10 minutes ago   Exited (137) About a minute ago             myubuntu
 52007bcabe5f   ubuntu    "/bin/bash"   13 minutes ago   Exited (0) 12 minutes ago                   nifty_curie
+
 yerihan3763@c4r2s8 ~ % docker images
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 ubuntu        latest    de7345b16e94   2 weeks ago    100MB
@@ -836,49 +844,10 @@ Deleted: sha256:897b3f2a7c1bc2f3d02432f7892fe31c6272c521ad4d70257df624504a3238b4
 yerihan3763@c4r2s8 ~ % docker images
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 ubuntu       latest    de7345b16e94   2 weeks ago   100MB
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                            PORTS     NAMES
-c21fef3363b4   ubuntu    "/bin/bash"   11 minutes ago   Exited (137) About a minute ago             myubuntu
-52007bcabe5f   ubuntu    "/bin/bash"   14 minutes ago   Exited (0) 12 minutes ago                   nifty_curie
-yerihan3763@c4r2s8 ~ % docker rm myubuntu
-myubuntu
-yerihan3763@c4r2s8 ~ % docker rm 52007bcabe5f
-52007bcabe5f
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-yerihan3763@c4r2s8 ~ % docker images
-REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
-ubuntu       latest    de7345b16e94   2 weeks ago   100MB
-yerihan3763@c4r2s8 ~ % docker rmi ubuntu
-Untagged: ubuntu:latest
-Untagged: ubuntu@sha256:3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb
-Deleted: sha256:de7345b16e942e22044c6ba053020ec85ae879984860a9918517d54eb6cef851
-Deleted: sha256:9384d7fbfc7805e1cf888304178b7ecf01f8f1e766e1798cac368238c41b3df1
-Deleted: sha256:d6b1a90bccf18353db11e206211d1438050e64d14c56a48ae067131e0a3cc245
-yerihan3763@c4r2s8 ~ % docker run -it -d --name myubuntu ubuntu /bin/bash
-Unable to find image 'ubuntu:latest' locally
-latest: Pulling from library/ubuntu
-ed819469700f: Pull complete 
-a3679419df18: Pull complete 
-Digest: sha256:3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb
-Status: Downloaded newer image for ubuntu:latest
-412119eae7c2c870331c9d2171ba0bc587847fea615697eb8babbde00e1353c0
-yerihan3763@c4r2s8 ~ % 
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
-412119eae7c2   ubuntu    "/bin/bash"   11 seconds ago   Up 10 seconds             myubuntu
-yerihan3763@c4r2s8 ~ % docker run -it --name yourubuntu ubuntu
-root@7c84bdbc2bf7:/# exit
-exit
-yerihan3763@c4r2s8 ~ % docker ps -a
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                     PORTS     NAMES
-7c84bdbc2bf7   ubuntu    "/bin/bash"   7 seconds ago    Exited (0) 3 seconds ago             yourubuntu
-412119eae7c2   ubuntu    "/bin/bash"   55 seconds ago   Up 54 seconds                        myubuntu
-yerihan3763@c4r2s8 ~ % docker attach myubuntu
-root@412119eae7c2:/# hi
-bash: hi: command not found
-root@412119eae7c2:/# read escape sequence
-yerihan3763@c4r2s8 ~ % 
+```
+
+### 컨테이너 중지시키기 + 도커 이미지 한번에 2개 삭제하기
+```css
 yerihan3763@c4r2s8 ~ % docker ps -a
 CONTAINER ID   IMAGE     COMMAND       CREATED              STATUS                          PORTS     NAMES
 7c84bdbc2bf7   ubuntu    "/bin/bash"   About a minute ago   Exited (0) About a minute ago             yourubuntu
@@ -894,6 +863,10 @@ myubuntu
 yourubuntu
 yerihan3763@c4r2s8 ~ % docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+### 도커 이미지 삭제하기
+```css
 yerihan3763@c4r2s8 ~ % docker images
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 ubuntu       latest    de7345b16e94   2 weeks ago   100MB
@@ -905,44 +878,4 @@ Deleted: sha256:9384d7fbfc7805e1cf888304178b7ecf01f8f1e766e1798cac368238c41b3df1
 Deleted: sha256:d6b1a90bccf18353db11e206211d1438050e64d14c56a48ae067131e0a3cc245
 yerihan3763@c4r2s8 ~ % docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
-yerihan3763@c4r2s8 ~ % docker --version
-Docker version 28.5.2, build ecc6942
-yerihan3763@c4r2s8 ~ % pwd
-/Users/yerihan3763
-yerihan3763@c4r2s8 ~ % cd Codyssey_M1 
-yerihan3763@c4r2s8 Codyssey_M1 % git add .
-yerihan3763@c4r2s8 Codyssey_M1 % git commit -m "docs: 2단계 Docker 기초 실습 로그 추가"
-[main 7c320c7] docs: 2단계 Docker 기초 실습 로그 추가
- Committer: 우광택 <yerihan3763@c4r2s8.codyssey.kr>
-이름과 전자메일 주소를 사용자 이름과 호스트 이름을 이용해서 자동으로
-설정했습니다. 이 정보가 맞는지 확인하십시오. 이 메시지를 보지 않으려면 정보를
-명시적으로 설정하십시오. 다음 명령어를 실행하고 편집기의 안내에 따라 설정
-파일을 편집하십시오:
-
-    git config --global --edit
-
-이렇게 한 다음, 이 커밋에 사용한 신원 정보를 다음과 같이 해서 바꿀 수 있습니다:
-
-    git commit --amend --reset-author
-
- 2 files changed, 232 insertions(+)
- create mode 100644 step2.log
-yerihan3763@c4r2s8 Codyssey_M1 % git push origin main
-오브젝트 나열하는 중: 6, 완료.
-오브젝트 개수 세는 중: 100% (6/6), 완료.
-Delta compression using up to 6 threads
-오브젝트 압축하는 중: 100% (4/4), 완료.
-오브젝트 쓰는 중: 100% (4/4), 2.90 KiB | 2.90 MiB/s, 완료.
-Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/yerihanview/Codyssey_M1
-   050399b..7c320c7  main -> main
-yerihan3763@c4r2s8 Codyssey_M1 % ls -la
-total 48
-drwxr-xr-x   7 yerihan3763  yerihan3763   224  7 30 09:51 .
-drwxr-x---+ 20 yerihan3763  yerihan3763   640  7 30 09:58 ..
-drwxr-xr-x  13 yerihan3763  yerihan3763   416  7 30 10:31 .git
-drwxr-xr-x   4 yerihan3763  yerihan3763   128  7 30 09:31 practice
--rw-r--r--   1 yerihan3763  yerihan3763  3039  7 30 10:30 README.md
--rw-r--r--   1 yerihan3763  yerihan3763  6614  7 30 09:11 step1.log
--rw-r--r--   1 yerihan3763  yerihan3763  9721  7 30 09:52 step2.log
+```
