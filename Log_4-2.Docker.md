@@ -1,18 +1,4 @@
 
-### 개발 환경 정보 확인 + README.md에 기록
-```css
-yerihan3763@c5r6s7 Codyssey_M1 % sw_vers
-ProductName:		macOS
-ProductVersion:		15.7.7
-BuildVersion:		24G720
-
-yerihan3763@c5r6s7 Codyssey_M1 % echo $SHELL
-/bin/zsh
-
-yerihan3763@c5r6s7 Codyssey_M1 % git --version
-git version 2.53.0
-```
-
 ### docker 기동 확인 : 실패 (OrbStack이 죽어 있음)
 ```css
 yerihan3763@c5r6s7 Codyssey_M1 % docker --version  
